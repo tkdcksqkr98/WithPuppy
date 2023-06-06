@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="communities">
+	<!-- insert, delete, update는 무조건 resultType="int"이므로
+	     프로그래머가 써주지 않아도 이미 resultType="int"가 
+	     있는 것으로 본다.!
+	 -->
+	<insert id="insert" parameterType="communitiesVO">
+		insert into communities  (commu_id, commu_no , commu_title, commu_content, commu_img, category1 , commu_view	)
+		values (#{commu_id}, null , #{commu_title}, #{commu_content}, #{commu_img} , #{category1} , #{commu_view}	)
+	</insert>
+	
+	<delete id="del"  parameterType="Int">
+		delete from communities where commu_no = #{commu_no}
+	</delete>
+	
+	<update id="up"  parameterType="communitiesVO">
+		update communities set commu_title = #{commu_title} , commu_content = #{commu_content} 
+		where commu_no = #{commu_no}
+	</update>
+	
+	<select id="one" parameterType="communitiesVO" resultType="communitiesVO">
+		select * 
+		from communities
+		where commu_no = #{commu_no}
+	</select>
+	
+	<select id="list" parameterType="pageVO" resultType="communitiesVO">
+		select*from (
+			select ROW_NUMBER() over(order by commu_no desc) as c_no , commu_no,commu_title,commu_date,commu_id,commu_view 
+			from communities c) c2
+			where c2.c_no between ${start} and ${end}
+	</select>
+
+	<select id="list_category" parameterType="pageVO" resultType="communitiesVO">
+		select*from (
+			select ROW_NUMBER() over(order by commu_no desc) as c_no , commu_no,commu_title,commu_date,commu_id,commu_view 
+			from communities c) c2
+			where c2.c_no between ${start} and ${end}
+	</select>
+	
+	<select id="Metrolist_category" parameterType="pageVO" resultType="communitiesVO">
+		select*from (
+			select ROW_NUMBER() over(order by commu_no desc) as c_no , commu_no,commu_title,commu_date,commu_id,commu_view,category1 
+			from communities c) c2
+			where c2.category1 = 2 limit 5
+	</select>
+	
+	<select id="Freelist_category" parameterType="pageVO" resultType="communitiesVO">
+		select*from (
+			select ROW_NUMBER() over(order by commu_no desc) as c_no , commu_no,commu_title,commu_date,commu_id,commu_view,category1 
+			from communities c) c2
+			where c2.category1 = 1 limit 5
+	</select>
+	
+	<select id="Vincelist_category" parameterType="pageVO" resultType="communitiesVO">
+		select*from (
+			select ROW_NUMBER() over(order by commu_no desc) as c_no , commu_no,commu_title,commu_date,commu_id,commu_view,category1 
+			from communities c) c2
+			where c2.category1 = 3 limit 5
+	</select>
+	
+	<select id="count" resultType="Integer">
+		select count(*) from communities
+	</select>
+	
+<!--  커뮤니티 매퍼코드 -->
+    <update id="userCommu"  parameterType="String">
+        update user
+           set user_commu = user_commu + 1
+         where user_id = #{commu_id}
+    </update>
+<!--  댓글 매퍼 코드 -->
+    <update id="userReply"  parameterType="String">
+        update user
+           set user_reply = user_reply + 1
+         where user_id = #{reply_id}
+    </update>
+	
+	
+</mapper>
+
+
+
