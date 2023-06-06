@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="reply">
+	<!-- insert, delete, update는 무조건 resultType="int"이므로
+	     프로그래머가 써주지 않아도 이미 resultType="int"가 
+	     있는 것으로 본다.!
+	 -->
+	<insert id="create_reply" parameterType="replyVO" >
+		insert into reply (reply_no, reply_id, reply_content, commu_no)
+		values (null, #{reply_id}, #{reply_content},#{commu_no})
+	</insert>
+	
+	<delete id="delete_reply"  parameterType="Int">
+		delete from reply 
+		where reply_no = #{reply_no}
+	</delete>
+	
+	<update id="update_reply" parameterType="Map">
+		update reply 
+		set reply_content = #{reply_content} 
+		where reply_no = #{reply_no}
+	</update>
+	
+	<select id="one" parameterType="replyVO" resultType="replyVO">
+		select * 
+		from reply
+		where reply_no = #{reply_no}
+	</select>
+	
+	<select id="upone" parameterType="replyVO" resultType="replyVO">
+		select reply_content 
+		from reply
+		where reply_no = #{reply_no}
+	</select>
+	
+	<select id="list_reply"  parameterType="Int" resultType="replyVO">
+		select *
+		from reply
+		where commu_no = #{commu_no}
+		
+	</select>
+</mapper>
+
