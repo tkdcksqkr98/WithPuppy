@@ -26,5 +26,15 @@ https://electric-hat-2a3.notion.site/8beb79dc8c9a4817885614ba245c9e2b?pvs=4
 - 결제 : 물품을 수령할 고객의 전화번호 및 주소를 입력 및 I`mport 결제 API를 사용
 
 ![쇼핑몰-1](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/a3181969-5663-47df-8be7-18c7d50bd746)
-![쇼핑몰-2](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/5bb4ecf7-cd6c-40f0-a933-72c6918c4099)
+![쇼핑몰-2](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/6b24a1ba-54a4-4c71-8eda-03fa279a1b85)
+![쇼핑몰-3](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/c5e54775-88e0-4e97-9e1f-9f0a76f9a419)
+![쇼핑몰-4](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/f37b567e-2e71-429e-9a96-d051cc90de90)
+![쇼핑몰-5](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/5bf5b2f6-fbd6-4aee-aa19-00caa897816b)
+![쇼핑몰-6](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/c88a3929-ec8a-424d-924f-eca174673ff4)
+![쇼핑몰-7](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/632449cb-84f8-47d8-8cbf-48a16a601e0e)
+![쇼핑몰-8](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/95a36f43-bfa7-45b7-905e-adc9b3b9c9ce)
+
+## 구현 예정 사항
+![구현예정사항](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/d20d731c-d65c-4c64-b84f-437f548c1f64)
+
 
