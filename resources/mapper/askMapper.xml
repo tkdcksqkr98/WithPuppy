@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Ask">
+	<!-- insert, delete, update는 무조건 resultType="int"이므로
+		프로그래머가 써주지 않아도 이미 resultType="int"가 있는 것으로 본다!
+	-->
+	<insert id="create" parameterType="AskVO">
+		insert into ask values (null, #{ask_title}, #{ask_content}, #{ask_writer}, now(), null, null, null)
+	</insert>
+	
+	<delete id="del"  parameterType="Integer">
+		delete from ask where ask_no = #{ask_no}
+	</delete>
+	
+	<update id="update"  parameterType="AskVO">
+		update ask set ask_title = #{ask_title}, ask_content = #{ask_content} where ask_no = #{ask_no}
+	</update>
+	
+	<select id="one"  parameterType="AskVO" resultType="AskVO">
+		select * from ask where ask_title like CONCAT('%', #{ask_title}, '%') and ask_writer = #{ask_writer} order by ask_no desc
+	</select>
+	
+	<select id="oneNo"  parameterType="Integer" resultType="AskVO">
+		select * from ask where ask_no = #{ask_no}
+	</select>
+	
+	<select id="updateNo"  parameterType="Integer" resultType="AskVO">
+		select * from ask where ask_no = #{ask_no}
+	</select>
+	
+	<select id="allUser" parameterType="String" resultType="AskVO">
+		select * from ask where ask_writer = #{ask_writer} order by ask_no desc
+	</select>
+	
+	<select id="all" resultType="AskVO">
+		select * from ask order by ask_no desc
+	</select>
+	
+</mapper>
