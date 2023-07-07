@@ -25,5 +25,5 @@ https://electric-hat-2a3.notion.site/8beb79dc8c9a4817885614ba245c9e2b?pvs=4
 - 장바구니 : 상세 페이지에서 담은 물품들 리스트 출력 및 결제 페이지 이동 (로그인 상태가 아니라면 로그인 페이지로 이동)
 - 결제 : 물품을 수령할 고객의 전화번호 및 주소를 입력 및 I`mport 결제 API를 사용
 
-- ![image](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/32666842-13f6-41e6-a4a8-d059e51b9ac2)
+- ![쇼핑몰-1](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/32666842-13f6-41e6-a4a8-d059e51b9ac2)
 
