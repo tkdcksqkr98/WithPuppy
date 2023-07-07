@@ -26,4 +26,5 @@ https://electric-hat-2a3.notion.site/8beb79dc8c9a4817885614ba245c9e2b?pvs=4
 - 결제 : 물품을 수령할 고객의 전화번호 및 주소를 입력 및 I`mport 결제 API를 사용
 
 ![쇼핑몰-1](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/a3181969-5663-47df-8be7-18c7d50bd746)
+![쇼핑몰-2](https://github.com/tkdcksqkr98/WithPuppy/assets/82599643/5bb4ecf7-cd6c-40f0-a933-72c6918c4099)
 
